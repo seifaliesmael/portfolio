@@ -46,7 +46,7 @@ export const appData: AppData = {
             ],
             tags: ["Hackathon Project", "Data Analysis", "Semantic Analysis"],
             repo:"https://github.com/seifaliesmael/whack-25-SMTP",
-            images: ["/assets/img/projects/validit/validit1.jpg", "/assets/img/projects/validit/validit2.jpg", "/assets/img/projects/validit/validit3.jpg"],
+            images: ["assets/img/projects/validit/validit1.jpg", "assets/img/projects/validit/validit2.jpg", "assets/img/projects/validit/validit3.jpg"],
             collaborators: ["Muhammad Aayan Ali", "Charles Davis", "Tanvi Patnayukuni"]
         },
         {
@@ -64,7 +64,7 @@ export const appData: AppData = {
             ],
             tags: ["Hackathon Project", "Artificial Intelligence", "PHP"],
             repo: "https://github.com/Alistair58/hacklondon26",
-            images: ["/assets/img/projects/omc/omc1.jpg", "/assets/img/projects/omc/omc2.jpg", "/assets/img/projects/omc/omc3.jpg", "/assets/img/projects/omc/omc4.jpg", "/assets/img/projects/omc/omc5.jpg"],
+            images: ["assets/img/projects/omc/omc1.jpg", "assets/img/projects/omc/omc2.jpg", "assets/img/projects/omc/omc3.jpg", "assets/img/projects/omc/omc4.jpg", "assets/img/projects/omc/omc5.jpg"],
             collaborators: ["Bhushan Balaji", "Charles Davis", "Alistair Hanlon"]
         },
         {
@@ -79,7 +79,7 @@ export const appData: AppData = {
             ],
             tags: ["MVC", "Database Management"],
             repo:undefined,
-            images:  ["/assets/img/projects/pmp/pmp1.png", "/assets/img/projects/pmp/pmp2.png", "/assets/img/projects/pmp/pmp3.png", "/assets/img/projects/pmp/pmp4.png", "/assets/img/projects/pmp/pmp5.png",],
+            images:  ["assets/img/projects/pmp/pmp1.png", "assets/img/projects/pmp/pmp2.png", "assets/img/projects/pmp/pmp3.png", "assets/img/projects/pmp/pmp4.png", "assets/img/projects/pmp/pmp5.png",],
             collaborators: undefined
         },
         {
@@ -97,7 +97,7 @@ export const appData: AppData = {
             ],
             tags: ["Game Development", "Unreal Engine", "C++"],
             repo:"https://github.com/seifaliesmael/PersonalProjectUE",
-            images: ["/assets/img/projects/myp5/myp51.png", "/assets/img/projects/myp5/myp52.png", "/assets/img/projects/myp5/myp53.png", "/assets/img/projects/myp5/myp54.png"],
+            images: ["assets/img/projects/myp5/myp51.png", "assets/img/projects/myp5/myp52.png", "assets/img/projects/myp5/myp53.png", "assets/img/projects/myp5/myp54.png"],
             collaborators: undefined
         },
     ]

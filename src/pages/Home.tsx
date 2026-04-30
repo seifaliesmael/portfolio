@@ -39,7 +39,7 @@ const Home = ({onNavTrigger} : Props) => {
             <div className="col-lg-4 order-1 order-lg-2">
               <div className="hero-image">
                 <div className="image-wrapper">
-                  <img src="/assets/img/seif.jpg" alt="Seif Ali Esmael" className="img-fluid"/>
+                  <img src="assets/img/seif.jpg" alt="Seif Ali Esmael" className="img-fluid"/>
                 </div>
               </div>
             </div>
