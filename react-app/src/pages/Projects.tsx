@@ -15,6 +15,8 @@ const Projects = () => {
     else return selectedProjectImage;
   }
 
+
+
   return (
     <div>
       {/* Portfolio Section */}
@@ -43,7 +45,15 @@ const Projects = () => {
                       style={{cursor: "pointer"}}>
                         
                       <div className="portfolio-img">
-                        <img src={project.images?.[0] ?? "assets/img/portfolio/portfolio-4.webp"} alt="Portfolio Item" className="img-fluid"/>
+                        <img src={project.images?.[0] ?? "assets/img/portfolio/portfolio-4.webp"} 
+                        alt="Portfolio Item" 
+                        className="img-fluid"
+                        style={{
+                          width: "100%",
+                          aspectRatio: "16/9",       // Forces a horizontal shape (adjust to 3/2 or 4/3 if needed)
+                          objectFit: "contain",      // Shrinks the image to fit inside without cropping
+                          backgroundColor: "#ffffff" // Adds the white padding on the empty sides
+                        }}/>
                       </div>
                       <div className="portfolio-info">
                         <h4> {project.title} </h4>
@@ -90,7 +100,6 @@ const Projects = () => {
               style={{ position: "absolute", top: "20px", right: "20px", fontSize: "1.5rem" }}
             ></button>
 
-            {/* Injected HTML Template converted to JSX */}
             <div className="portfolio-details">
               <div className="section-title mb-4">
                 <h2>{selectedProject.title}</h2>
@@ -101,17 +110,52 @@ const Projects = () => {
                 <div className="col-lg-6">
                   <div className="portfolio-details-media">
                     <div className="main-image mb-3">
-                      <img src={getCurrentProjectImage() ?? "assets/img/portfolio/portfolio-5.webp"} alt="Main Project" className="img-fluid rounded" />
+                      <img src={getCurrentProjectImage() ?? "assets/img/portfolio/portfolio-5.webp"} 
+                      alt="Main Project" 
+                      className="img-fluid rounded" 
+                      style={{
+                        width: "100%",
+                        aspectRatio: "16/9",
+                        objectFit: "contain",
+                        backgroundColor: "#ffffff"
+                      }}/>
                     </div>
                     <div className="thumbnail-grid">
                       <div className="row g-2">
                         {selectedProject.images?.map((link:string) => 
-                          (<div className="col-3"><img src={link} alt="Gallery" className="img-fluid rounded" onClick={() => setSelectedProjectImage(link)} /></div>))}
+                          (<div className="col-3">
+                            <img src={link} 
+                            alt="Gallery" 
+                            className="img-fluid rounded" 
+                            style={{
+                              width: "100%",
+                              aspectRatio: "16/9",
+                              objectFit: "contain",
+                              backgroundColor: "#ffffff"
+                            }}
+                            onClick={() => setSelectedProjectImage(link)} 
+                            />
+                          </div>))}
                       </div>
                     </div>
                     <div className="tech-stack-badges mt-4 d-flex flex-wrap gap-2">
                       <span className="badge bg-secondary">{selectedProject.skills}</span>
                     </div>
+                    {selectedProject.collaborators && (
+                      <div className="collaborators-section mt-4"> 
+                        <h5 className="mb-3 fw-bold" style={{ color: "var(--heading-color)" }}>Collaborators</h5>
+                        <ul className="list-unstyled m-0">
+                          {selectedProject.collaborators.map((person: string, index: number) => (
+                            <li key={index} className="d-flex align-items-center mb-2" style={{ color: "color-mix(in srgb, var(--default-color), transparent 15%)" }}>
+                              {/* Using a person icon to match the theme! */}
+                              <i className="bi bi-person-fill me-2" style={{ color: "var(--accent-color)", fontSize: "1.1rem" }}></i>
+                              <span>{person}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    
                   </div>
                 </div>
 
@@ -120,17 +164,20 @@ const Projects = () => {
                   <div className="portfolio-details-content">
                     
                     <h2 className="project-title mb-3">{selectedProject.title}</h2>
+                    
+                    {selectedProject.repo && (
                     <div className="project-website-box mb-2 p-3 light-background"
                     style={{ backgroundColor: "#213642",
                     borderRadius: "10px",              
                     border: "1px solid color-mix(in srgb, var(--default-color), transparent 90%)"
                     }}> 
-                      <h5> <strong>Link to Project</strong> </h5>
-                      <div className="project-website">
+                      <h5> <strong>Link to Project Repository </strong> </h5>
+                      <div className="project-website mb-0">
                         <i className="bi bi-link-45deg"></i>
                         <a href={selectedProject.repo} target="_blank" rel="noreferrer"> {selectedProject.repo}</a>
                       </div>
                     </div>
+                    )}
 
                     <div className="project-overview mb-4">
                       <p className="lead"> {(selectedProject.description == "") ? "Default description" : selectedProject.description}
@@ -148,13 +195,6 @@ const Projects = () => {
                       </ul>
                     </div>
 
-                    <div className="cta-buttons mt-5">
-                      <a href="#" className="btn btn-primary me-3">View Live Project</a>
-                      <a href={appData.links.gitHub} target="_blank" rel="noreferrer" className="btn btn-outline-dark">
-                        <i className="bi bi-github me-2"></i> GitHub Repo
-                      </a>
-                    </div>
-
                   </div>
                 </div>
               </div>
@@ -162,7 +202,7 @@ const Projects = () => {
 
           </div>
         </div>
-      )}
+      )} {/* End of Project Details pop-up*/}
 
     </div>
   )
