@@ -71,7 +71,9 @@ export const appData: AppData = {
             id:3,
             title: "Property Management Platform",
             skills:".NET MVC, C#, Transact-SQL",
-            description:"",
+            description:`This was the project I built for my IB Computer Science IA. I sought out a client - a real estate development company,
+            and built them a web application with a management view and a client view. Through this app, the business could manage their assets and properties, including
+            data about ownership, rent and contracts, and clients could view available properties and make deals on them.`,
             bulletPoints: [
                 <>Used the <strong>.NET MVC Framework</strong> using <strong>credential-based authentication</strong> to dynamically generate views for different user groups and manage permissions and functionality in a full-stack application.</>,
                 <>Securely linked a <strong>MySQL database</strong> via an ORM to translate object-oriented data into database records</>,
