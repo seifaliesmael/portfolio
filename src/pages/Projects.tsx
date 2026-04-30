@@ -174,7 +174,7 @@ const Projects = () => {
                       <h5> <strong>Link to Project Repository </strong> </h5>
                       <div className="project-website mb-0">
                         <i className="bi bi-link-45deg"></i>
-                        <a href={selectedProject.repo} target="_blank" rel="noreferrer"> {selectedProject.repo}</a>
+                        <a href={selectedProject.repo} target="_blank" rel="noreferrer" style={{ wordBreak: "break-all" }}> {selectedProject.repo}</a>
                       </div>
                     </div>
                     )}

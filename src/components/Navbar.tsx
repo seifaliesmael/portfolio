@@ -1,4 +1,4 @@
-// import React from 'react'
+import { useState } from 'react'
 import NavButton from "./NavButton"
 import {appData} from "../data/appData";
 
@@ -8,37 +8,44 @@ interface Props {
 }
 
 const Navbar = ({onNavTrigger, current}: Props) => {
-  return (
+
+    const Pages = ["Home", "Projects", "Experience", "Education"]
+    // For mobile navigation bar
+    const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+    const toggleMobileNav = () => {
+        setMobileNavOpen(!mobileNavOpen);
+        document.body.classList.toggle('mobile-nav-active');
+    }
+
+    const closeMobileNav = () => {
+        setMobileNavOpen(false);
+        document.body.classList.remove('mobile-nav-active');
+    }
+
+    const handleNavClick = (page:string) => {
+        onNavTrigger(page);
+        closeMobileNav();
+    }
+
+    return (
     <header id="header" className="header d-flex align-items-center light-background sticky-top">
         <div className="container position-relative d-flex align-items-center justify-content-between">
             <nav id="navmenu" className="navmenu">
                 <ul>
-                    <NavButton 
-                        name="Home"
-                        page="Home"
-                        isActive={current == "Home"}
-                        onTriggerPage={onNavTrigger}
-                    />
-                    <NavButton 
-                        name="Projects"
-                        page="Projects"
-                        isActive={current == "Projects"}
-                        onTriggerPage={onNavTrigger}
-                    />
-                    <NavButton 
-                        name="Experience"
-                        page="Experience"
-                        isActive={current == "Experience"}
-                        onTriggerPage={onNavTrigger}
-                    />
-                    <NavButton 
-                        name="Education"
-                        page="Education"
-                        isActive={current == "Education"}
-                        onTriggerPage={onNavTrigger}
-                    />
+                    {Pages.map((page:string) => 
+                    <NavButton
+                        name={page}
+                        page={page}
+                        isActive={current == page}
+                        onTriggerPage={handleNavClick}>
+                    </NavButton>)}
                 </ul>
-            <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            <i 
+              className={`mobile-nav-toggle d-xl-none bi ${mobileNavOpen ? 'bi-x' : 'bi-list'}`}
+              onClick={toggleMobileNav}
+              style={{ cursor: "pointer" }}
+            ></i>
         </nav>
 
         {/* Socials */}
@@ -48,7 +55,7 @@ const Navbar = ({onNavTrigger, current}: Props) => {
         </div>
     </div>
     </header>
-  )
+    )
 }
 
 export default Navbar
