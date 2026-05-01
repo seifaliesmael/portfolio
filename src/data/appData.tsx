@@ -32,6 +32,23 @@ export const appData: AppData = {
     },
     projects: [
         {
+            id: 5,
+            title: "No Time to Live",
+            skills: "Unity, C#",
+            description:`This project was my submission for the Great Warwick Game Jam 2026. With the prompt "No Time to Explain", 
+            my partner and I made an infinite side-scroller with a simple premise: You age backwards. Defeating enemies and bosses,
+            as well as picking up items, gives you some of your lifespan back, and the aim is to last as long as possible.`,
+            bulletPoints: [
+                <> Collaborated with a partner to build a <strong>fully playable side-scroller </strong> under strict time constraints </>,
+                <> Implemented <strong>2D Movement and Combat</strong> from scratch for <strong>responsive and dynamic</strong> gameplay. </>,
+                <> Used <strong>Un  ity Version Control</strong> to independently build and merge features and manage multi-platform builds. </>
+            ],
+            tags: ["Game Jam Project", "Game Development", "C#"],
+            repo: "",
+            images: ["assets/img/projects/gamejam/gamejam1.png", "assets/img/projects/gamejam/gamejam2.png", "assets/img/projects/gamejam/gamejam3.png", "assets/img/projects/gamejam/gamejam4.png"],
+            collaborators: ["Charles Davis"]
+        },
+        {
             id:4,
             title: "Organise My Career (OMC)",
             skills: "Flutter, Dart, SQL",
