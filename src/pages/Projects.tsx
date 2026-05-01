@@ -15,8 +15,6 @@ const Projects = () => {
     else return selectedProjectImage;
   }
 
-
-
   return (
     <div>
       {/* Portfolio Section */}

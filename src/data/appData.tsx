@@ -32,25 +32,7 @@ export const appData: AppData = {
     },
     projects: [
         {
-            id:1,
-            title: "Validit",
-            skills:"Python Flask, SQLAlchemy (SQLite 3)",
-            description:`Validit was a platform built by me and three teammates during the Warwick Hackathon (WHACK) 2025. 
-            In response to Brevan Howard's prompt \"Create something that helps understand information accuracy.\", we developed a platform that aggregates news articles and runs a multi-layer algorithm to analyse
-            the validity and accuracy of the article. `,
-            bulletPoints: [
-                <>Built a credible news delivery platform using <strong>Flask</strong> to classify <strong>100+ articles</strong> weekly across 10 investment sectors</>,
-                <>Integrated <strong>REST APIs</strong> such as OpenAlex, Semantic Scholar and ZeroGPT to analyse article credibility</>,
-                <>Implemented sentiment analysis using <strong>TextBlob/vaderSentiment</strong> and automatic summaries via the <strong>Gemini API</strong></>,
-                <>Collaborated in a team of 4 using <strong>GitHub</strong> for concurrent contributions to the codebase and merge conflict resolution</>
-            ],
-            tags: ["Hackathon Project", "Data Analysis", "Semantic Analysis"],
-            repo:"https://github.com/seifaliesmael/whack-25-SMTP",
-            images: ["assets/img/projects/validit/validit1.jpg", "assets/img/projects/validit/validit2.jpg", "assets/img/projects/validit/validit3.jpg"],
-            collaborators: ["Muhammad Aayan Ali", "Charles Davis", "Tanvi Patnayukuni"]
-        },
-        {
-            id:2,
+            id:4,
             title: "Organise My Career (OMC)",
             skills: "Flutter, Dart, SQL",
             description:`Organise My Career (OMC) was the app my team and I built at HackLondon 2026. We pursued Knowunity's prompt of building an app to help people learn,
@@ -69,6 +51,24 @@ export const appData: AppData = {
         },
         {
             id:3,
+            title: "Validit",
+            skills:"Python Flask, SQLAlchemy (SQLite 3)",
+            description:`Validit was a platform built by me and three teammates during the Warwick Hackathon (WHACK) 2025. 
+            In response to Brevan Howard's prompt \"Create something that helps understand information accuracy.\", we developed a platform that aggregates news articles and runs a multi-layer algorithm to analyse
+            the validity and accuracy of the article. `,
+            bulletPoints: [
+                <>Built a credible news delivery platform using <strong>Flask</strong> to classify <strong>100+ articles</strong> weekly across 10 investment sectors</>,
+                <>Integrated <strong>REST APIs</strong> such as OpenAlex, Semantic Scholar and ZeroGPT to analyse article credibility</>,
+                <>Implemented sentiment analysis using <strong>TextBlob/vaderSentiment</strong> and automatic summaries via the <strong>Gemini API</strong></>,
+                <>Collaborated in a team of 4 using <strong>GitHub</strong> for concurrent contributions to the codebase and merge conflict resolution</>
+            ],
+            tags: ["Hackathon Project", "Data Analysis", "Semantic Analysis"],
+            repo:"https://github.com/seifaliesmael/whack-25-SMTP",
+            images: ["assets/img/projects/validit/validit1.jpg", "assets/img/projects/validit/validit2.jpg", "assets/img/projects/validit/validit3.jpg"],
+            collaborators: ["Muhammad Aayan Ali", "Charles Davis", "Tanvi Patnayukuni"]
+        },
+        {
+            id:2,
             title: "Property Management Platform",
             skills:".NET MVC, C#, Transact-SQL",
             description:`This was the project I built for my IB Computer Science IA. I sought out a client - a real estate development company,
@@ -85,7 +85,7 @@ export const appData: AppData = {
             collaborators: undefined
         },
         {
-            id:4,
+            id:1,
             title: "Wave-Based Arena Game",
             skills:"Unreal Engine, C++",
             description:`This was my submission for the IB MYP (Middle-Years-Programme) Personal Project in 2022. As game development was a big interest of mine,
