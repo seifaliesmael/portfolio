@@ -29,7 +29,8 @@ const Navbar = ({onNavTrigger, current}: Props) => {
     }
 
     return (
-    <header id="header" className="header d-flex align-items-center light-background sticky-top">
+    <header id="header" className="header d-flex align-items-center light-background sticky-top"
+    style={{ zIndex: 9999, backgroundColor: "#101a20"}}>
         <div className="container position-relative d-flex align-items-center justify-content-between">
             <nav id="navmenu" className="navmenu">
                 <ul>

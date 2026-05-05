@@ -22,7 +22,7 @@ const Home = ({onNavTrigger} : Props) => {
                   <div>
                     <a
                     className="btn btn-primary"
-                    onClick={() => onNavTrigger('Projects')}
+                    onClick={() => onNavTrigger('Projects & Skills')}
                     style={{ cursor: 'pointer' }}>
                     My Projects
                     </a>
