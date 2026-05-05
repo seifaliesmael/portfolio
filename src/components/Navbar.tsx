@@ -9,7 +9,7 @@ interface Props {
 
 const Navbar = ({onNavTrigger, current}: Props) => {
 
-    const Pages = ["Home", "Projects", "Experience", "Education"]
+    const Pages = ["Home", "Projects & Skills", "Experience", "Education"]
     // For mobile navigation bar
     const [mobileNavOpen, setMobileNavOpen] = useState(false);
 

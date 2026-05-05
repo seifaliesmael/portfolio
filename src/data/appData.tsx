@@ -7,7 +7,14 @@ interface AppData {
     contact: {
         email: string
     }
+    skills:Skills
     projects:Project[]
+}
+
+export interface Skills {
+    proficientLangs:string[]
+    basicLangs:string[]
+    frameworks:string[]
 }
 
 export interface Project {
@@ -29,6 +36,11 @@ export const appData: AppData = {
     },
     contact : {
         email: "seifali.esmael@gmail.com"
+    },
+    skills : {
+        proficientLangs: ["C#", "Java", "Python"],
+        basicLangs: ["JavaScript", "TypeScript", "SQL", "Dart", "Haskell"],
+        frameworks: ["Flutter", ".NET", "React"]
     },
     projects: [
         {

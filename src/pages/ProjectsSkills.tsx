@@ -2,7 +2,7 @@ import { useState, type ReactNode} from "react";
 import { appData } from "../data/appData"
 import type {Project} from "../data/appData"
 
-const Projects = () => {
+const ProjectsSkills = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const closeDetails = () => setSelectedProject(null);
@@ -17,6 +17,103 @@ const Projects = () => {
 
   return (
     <div>
+      {/* Skills Section */}
+      <section id="skills" className="skills section">
+        {/* Section Title */}
+        <div className="container section-title">
+          <h2>Technical Skills</h2>
+          <p>Languages and stacks I'm proficient in, grouped by familiarity. </p>
+        </div>{/* End Section Title */}
+
+        <div className="container">
+          <div className="row gy-4">
+            {/* Basic Skills */}
+            <div className="col-lg-4 col-md-6">
+              <div 
+                className="skills-box p-4 light-background h-100"
+                style={{ 
+                  backgroundColor: "#213642",
+                  borderRadius: "10px",              
+                  border: "1px solid color-mix(in srgb, var(--default-color), transparent 90%)"
+                }}
+              >
+                <h4 className="mb-4 fw-bold" style={{ color: "var(--heading-color)" }}>Languages | Basic</h4>
+                
+                <div className="d-flex flex-wrap gap-2">
+                  {appData.skills.basicLangs.map((skill, index) => (
+                    <span key={index} className="badge bg-secondary" 
+                    style={{ 
+                      fontSize: "0.95rem", 
+                      padding: "8px 12px"
+                    }}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Proficient Skills */}
+            <div className="col-lg-4 col-md-6">
+              <div 
+                className="skills-box p-4 light-background h-100"
+                style={{ 
+                  backgroundColor: "#213642",
+                  borderRadius: "10px",              
+                  border: "1px solid color-mix(in srgb, var(--default-color), transparent 90%)"
+                }}
+              >
+                <h4 className="mb-4 fw-bold" style={{ color: "var(--heading-color)"}}>Languages | Proficient</h4>
+                
+                <div className="d-flex flex-wrap gap-2">
+                  {appData.skills.proficientLangs.map((skill, index) => (
+                    <span key={index} className="badge" 
+                    style={{ 
+                        fontSize: "0.95rem", 
+                        padding: "8px 12px", 
+                        backgroundColor: "#0195a6",
+                        color: "#ffffff"
+                    }}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Frameworks */}
+            <div className="col-lg-4 col-md-6">
+              <div 
+                className="skills-box p-4 light-background h-100"
+                style={{ 
+                  backgroundColor: "#213642",
+                  borderRadius: "10px",              
+                  border: "1px solid color-mix(in srgb, var(--default-color), transparent 90%)"
+                }}
+              >
+                <h4 className="mb-4 fw-bold" style={{ color:  "var(--heading-color)" }}>Frameworks</h4>
+                
+                <div className="d-flex flex-wrap gap-2">
+                  {appData.skills.frameworks.map((skill, index) => (
+                    <span key={index} className="badge" 
+                    style={{ 
+                        fontSize: "0.95rem", 
+                        padding: "8px 12px",
+                        backgroundColor: "#007bff",
+                        color: "#ffffff"
+                        }}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>{/* /Skills Section */}
+
       {/* Portfolio Section */}
       <section id="portfolio" className="portfolio section">
 
@@ -206,4 +303,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default ProjectsSkills

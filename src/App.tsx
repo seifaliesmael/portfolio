@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Education from "./pages/Education";
+import ProjectsSkills from "./pages/ProjectsSkills";
 
 function App() {
   const [currPage, setCurrPage] = useState('Home');
@@ -12,8 +12,8 @@ function App() {
     switch(currPage) {
       case 'Home':
         return <Home onNavTrigger={setCurrPage}/>
-      case 'Projects':
-        return <Projects />
+      case 'Projects & Skills':
+        return <ProjectsSkills />
       case 'Experience':
         return <Experience />
       case 'Education':
