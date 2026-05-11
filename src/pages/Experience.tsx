@@ -7,6 +7,7 @@ const Experience = () => {
 
         {/* Section Title */}
         <div className="container section-title">
+            <h2>Experience</h2>
         </div>{/* End Section Title */}
 
         <div className="container">
