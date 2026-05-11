@@ -89,7 +89,7 @@ export const appData: AppData = {
                 <>Built a credible news delivery platform using <strong>Flask</strong> to classify <strong>100+ articles</strong> weekly across 10 investment sectors</>,
                 <>Integrated <strong>REST APIs</strong> such as OpenAlex, Semantic Scholar and ZeroGPT to analyse article credibility</>,
                 <>Implemented sentiment analysis using <strong>TextBlob/vaderSentiment</strong> and automatic summaries via the <strong>Gemini API</strong></>,
-                <>Collaborated in a team of 4 using <strong>GitHub</strong> for concurrent contributions to the codebase and merge conflict resolution</>
+                <>Collaborated using <strong>GitHub</strong> for concurrent codebase contributions and merge conflict resolution</>
             ],
             tags: ["Hackathon Project", "Data Analysis", "Semantic Analysis"],
             repo:"https://github.com/seifaliesmael/whack-25-SMTP",
@@ -104,9 +104,9 @@ export const appData: AppData = {
             and built them a web application with a management view and a client view. Through this app, the business could manage their assets and properties, including
             data about ownership, rent and contracts, and clients could view available properties and make deals on them.`,
             bulletPoints: [
-                <>Used the <strong>.NET MVC Framework</strong> using <strong>credential-based authentication</strong> to dynamically generate views for different user groups and manage permissions and functionality in a full-stack application.</>,
-                <>Securely linked a <strong>MySQL database</strong> via an ORM to translate object-oriented data into database records</>,
-                <>Maintained <strong>version control</strong> and transparency throughout the project using GitHub</>,
+                <>Built a property management web application for a real estate development company. </>,
+                <>Implemented dynamically generated views and actions for clients and managers using <strong>.NET MVC</strong>.</>,
+                <>Integrated a MySQL database for concurrent access control and scalability.</>
             ],
             tags: ["MVC", "Database Management"],
             repo:undefined,

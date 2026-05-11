@@ -7,7 +7,6 @@ const Experience = () => {
 
         {/* Section Title */}
         <div className="container section-title">
-          <h2>Experience</h2>
         </div>{/* End Section Title */}
 
         <div className="container">
@@ -17,6 +16,7 @@ const Experience = () => {
             <div className="col-lg-12">
               {/* Experience Section */}
               <div className="resume-item">
+                <h3 className="resume-title">Internships</h3>
 
                 <div className="resume-content">
                   <article className="experience-item">
@@ -42,6 +42,30 @@ const Experience = () => {
                       <li><strong>Audited</strong> onboarding/offboarding protocols to validate <strong>compliance with regulations</strong></li>
                       <li>Documented and evaluated <strong>data extractions</strong> using <strong>SQL and Microsoft Office Suite</strong></li>
                       <li><strong>Researched and planned</strong> IT infrastructure implementation/upgrade proposals for clients</li>
+                    </ul>
+                  </article>
+                </div>
+              </div>{/* End Experience Section */}
+            </div>
+          </div>
+
+        </div>
+
+        {/* Other Experiences */}
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="resume-item">
+                <h3 className="resume-title">Other Experience</h3>
+
+                <div className="resume-content">
+                  <article className="experience-item">
+                    <h4>Course Representative (SSLC)</h4>
+                    <h5>October 2025 - Present</h5>
+                    <p className="company">University of Warwick - Department of Computer Science<em> (Coventry, United Kingdom)</em></p>
+                    <ul>
+                      <li> Selected as course representative for the Computer Science course. </li>
+                      <li> Participating in regular dialogue with University administration and module leaders, representing student voice. </li>
                     </ul>
                   </article>
                 </div>
