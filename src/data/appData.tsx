@@ -56,7 +56,7 @@ export const appData: AppData = {
                 <> Used <strong>Un  ity Version Control</strong> to independently build and merge features and manage multi-platform builds. </>
             ],
             tags: ["Game Jam Project", "Game Development", "C#"],
-            repo: "",
+            repo: "https://github.com/charles-h-davis/warwickGameJam2026",
             images: ["assets/img/projects/gamejam/gamejam1.png", "assets/img/projects/gamejam/gamejam2.png", "assets/img/projects/gamejam/gamejam3.png", "assets/img/projects/gamejam/gamejam4.png"],
             collaborators: ["Charles Davis"]
         },
