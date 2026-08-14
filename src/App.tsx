@@ -1,37 +1,13 @@
-import { useState } from "react";
-import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import Experience from "./pages/Experience";
-import Education from "./pages/Education";
-import ProjectsSkills from "./pages/ProjectsSkills";
+import { sections } from "./sections/sections";
 
 function App() {
-  const [currPage, setCurrPage] = useState('Home');
-
-  const renderMain = () => {
-    switch(currPage) {
-      case 'Home':
-        return <Home onNavTrigger={setCurrPage}/>
-      case 'Projects & Skills':
-        return <ProjectsSkills />
-      case 'Experience':
-        return <Experience />
-      case 'Education':
-        return <Education />
-      default:
-        return <Home onNavTrigger={setCurrPage}/>
-    }
-  }
-
     return (
       <div>
-        <Navbar onNavTrigger={setCurrPage} current={currPage}/>
-        {renderMain()}
-
-        {/* Button to scroll back to the top */}
-        <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center">
-          <i className="bi bi-arrow-up-short"></i>
-        </a>
+        <Navbar />
+        <div className="p-5 pt-16 flex flex-col gap-10">
+          {sections.map(section => section.content)}
+        </div>
       </div>
     );
 }

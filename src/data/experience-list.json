@@ -1,0 +1,43 @@
+[
+  {
+    "id": 3,
+    "group": "Internships",
+    "role": "Software Development Intern",
+    "organisation": "PwC",
+    "location": "Telfair, Mauritius",
+    "period": "May 2025 - June 2025",
+    "bulletPoints": [
+      "Engineered a task-management system in **C# ASP.NET**, with an SQL database saving **250 hours annually**.",
+      "Implemented automated flow of data and tasks using **roles and access control** and integration to the database.",
+      "**Planned and led** an on-site **training session** for employees regarding the delegation system.",
+      "Designed and implemented a **large-scale data transformation algorithm** across **1,000,000+ records** in SQL, liaising with clients to define requirements and allow for **extensibility** of the system.",
+      "**Peer-reviewed code** to enforce best practices, consistency, and future-proofing."
+    ]
+  },
+  {
+    "id": 2,
+    "group": "Internships",
+    "role": "I.T Advisory Intern",
+    "organisation": "KPMG",
+    "location": "Ebene, Mauritius",
+    "period": "March 2025 - April 2025",
+    "bulletPoints": [
+      "Assisted in conducting **internal and external IT audits** for multinational clients, performing **completeness and accuracy testing** on system records and user data.",
+      "**Audited** onboarding/offboarding protocols to validate **compliance with regulations**.",
+      "Documented and evaluated **data extractions** using **SQL and Microsoft Office Suite**.",
+      "**Researched and planned** IT infrastructure implementation/upgrade proposals for clients."
+    ]
+  },
+  {
+    "id": 1,
+    "group": "Other Experience",
+    "role": "Course Representative (SSLC)",
+    "organisation": "University of Warwick - Department of Computer Science",
+    "location": "Coventry, United Kingdom",
+    "period": "October 2025 - Present",
+    "bulletPoints": [
+      "Selected as course representative for the Computer Science course.",
+      "Participating in regular dialogue with University administration and module leaders, representing student voice."
+    ]
+  }
+]

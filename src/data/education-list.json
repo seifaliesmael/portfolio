@@ -1,0 +1,44 @@
+[
+  {
+    "id": 3,
+    "qualification": "BSc in Computer Science",
+    "institution": "University of Warwick",
+    "location": "United Kingdom",
+    "period": "2025 - Present",
+    "note": "Expected graduation 2028",
+    "highlights": ["On track for a First (1st)"],
+    "achievements": [
+      "Course Representative",
+      "WHACK 2026 Organiser",
+      "Computing Society",
+      "Coding Society"
+    ]
+  },
+  {
+    "id": 2,
+    "qualification": "International Baccalaureate (IB)",
+    "institution": "Le Bocage International School",
+    "location": "Mauritius",
+    "period": "2023 - 2024",
+    "highlights": ["44/45 IB Diploma", "Highest marks in cohort"],
+    "achievements": [
+      "Student of the Year",
+      "Deputy Head Boy",
+      "Maths AA HL Prize",
+      "Physics HL Prize",
+      "Computer Science HL Prize",
+      "Founder & President, Chess Club",
+      "Vice President, Gavel (Toastmasters) Club",
+      "Vice President, Eco-Schools Club"
+    ]
+  },
+  {
+    "id": 1,
+    "qualification": "IGCSE",
+    "institution": "Le Bocage International School",
+    "location": "Mauritius",
+    "period": "2021 - 2022",
+    "highlights": ["9 A*s", "Highest marks in cohort"],
+    "achievements": []
+  }
+]
