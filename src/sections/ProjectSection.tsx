@@ -31,56 +31,68 @@ const ProjectCard = ({ project }: { project: Project }): JSX.Element => {
     >
 
         {/* min-h keeps every collapsed card the same height; justify-between pins the tags to the bottom */}
-        <div className="flex min-h-45 flex-col justify-between gap-4 p-6">
+        <div className="flex min-h-120 flex-col justify-between gap-4 p-6">
 
-            {/* Title + links */}
-            <div className="flex items-start justify-between gap-3">
-                <div className="flex flex-col gap-1">
+            {/* Title + links, with the skills line below so it gets the card's full width */}
+            <div className="flex flex-col gap-1">
+                <div className="flex items-start justify-between gap-3">
                     <p className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100"> {project.title} </p>
-                    <p className="text-sm italic text-slate-500 dark:text-slate-400"> {project.skills} </p>
+
+                    {/* Links must not toggle the card they sit inside */}
+                    <div className="flex shrink-0 flex-row items-center gap-2" onClick={event => event.stopPropagation()}>
+                        {project.liveUrl
+                        ? <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="rounded-full bg-cyan-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-cyan-500"
+                          >
+                            Live ↗
+                          </a>
+                        : null}
+                        {project.repo
+                        ? <a
+                            href={project.repo}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="rounded-full bg-slate-800 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600"
+                          >
+                            Code ↗
+                          </a>
+                        : null}
+                    </div>
                 </div>
 
-                {/* Links must not toggle the card they sit inside */}
-                <div className="flex shrink-0 flex-row items-center gap-2" onClick={event => event.stopPropagation()}>
-                    {project.liveUrl
-                    ? <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="rounded-full bg-cyan-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-cyan-500"
-                      >
-                        Live ↗
-                      </a>
-                    : null}
-                    {project.repo
-                    ? <a
-                        href={project.repo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="rounded-full bg-slate-800 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600"
-                      >
-                        Code ↗
-                      </a>
-                    : null}
-                </div>
+                <p className="text-sm italic text-slate-500 dark:text-slate-400"> {project.skills} </p>
             </div>
 
-            {/* Expanding detail: collapsed to zero height until the card is clicked open */}
-            <div className={`grid transition-[grid-template-rows] duration-500 ease-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
-                <div className="flex min-h-0 flex-col gap-4 overflow-hidden">
+            {/* Always-visible gallery: the first image while collapsed, the selected one once open.
+                Every image sits in one row and the row slides sideways, so changes swipe. */}
+            {project.images
+            ? <div className="flex flex-col gap-2">
+                <div className="aspect-video w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-100 dark:border-slate-800 dark:bg-slate-800">
+                    <div
+                        className="flex h-full flex-row transition-transform duration-500 ease-out"
+                        style={{ transform: `translateX(-${imageIndex * 100}%)` }}
+                    >
+                        {project.images.map((image, index) => (
+                            <img
+                                key={index}
+                                className="h-full w-full shrink-0 object-contain"
+                                src={image}
+                                alt={`${project.title} screenshot ${index + 1}`}
+                                loading={index === 0 ? "eager" : "lazy"}
+                            />
+                        ))}
+                    </div>
+                </div>
 
-                    {/* Project Image gallery */}
-                    {project.images
-                    ? <div className="flex flex-col gap-2">
-                        <img
-                            className="aspect-video w-full rounded-lg border border-slate-200 bg-slate-100 object-contain dark:border-slate-800 dark:bg-slate-800"
-                            src={project.images[imageIndex]}
-                            alt={`${project.title} screenshot ${imageIndex + 1}`}
-                        />
-
-                        {/* Gallery controls must not toggle the card they sit inside */}
-                        {imageCount > 1
-                        ? <div className="flex flex-row items-center justify-center gap-4" onClick={event => event.stopPropagation()}>
+                {/* Gallery controls: only reachable once the card is open */}
+                {imageCount > 1
+                ? <div className={`grid transition-[grid-template-rows] duration-500 ease-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                    <div className="min-h-0 overflow-hidden">
+                        {/* These must not toggle the card they sit inside */}
+                        <div className="flex flex-row items-center justify-center gap-4" onClick={event => event.stopPropagation()}>
                             <button
                                 type="button"
                                 onClick={previousImage}
@@ -98,11 +110,16 @@ const ProjectCard = ({ project }: { project: Project }): JSX.Element => {
                             >
                                 ›
                             </button>
-                          </div>
-                        : null}
-                      </div>
-                    : null
-                    }
+                        </div>
+                    </div>
+                  </div>
+                : null}
+              </div>
+            : null}
+
+            {/* Expanding detail: collapsed to zero height until the card is clicked open */}
+            <div className={`grid transition-[grid-template-rows] duration-500 ease-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                <div className="flex min-h-0 flex-col gap-4 overflow-hidden">
 
                     {/* Description */}
                     <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400"> {project.description} </p>
@@ -152,7 +169,6 @@ export const ProjectSection: JSX.Element =
     <div className="mb-10 flex flex-col items-center gap-3">
         <h2 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100"> Projects </h2>
         <p className="max-w-xl text-center text-lg leading-relaxed text-slate-500 dark:text-slate-400">
-            Some of my notable jam projects over the years. <br />
             <span className="italic"> Click any card to expand </span>
         </p>
     </div>
