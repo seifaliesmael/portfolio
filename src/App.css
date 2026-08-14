@@ -1,4 +1,9 @@
 @import "tailwindcss";
+
+/* Drives `dark:` off a .dark class on <html> instead of the OS setting,
+   so the toggle can override it. index.html sets that class before paint. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }

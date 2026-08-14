@@ -1,12 +1,12 @@
 [
   {
     "id": 3,
-    "qualification": "BSc in Computer Science",
+    "qualification": "BSc (Hons) in Computer Science",
     "institution": "University of Warwick",
     "location": "United Kingdom",
-    "period": "2025 - Present",
+    "period": "2025 - 2028",
     "note": "Expected graduation 2028",
-    "highlights": ["On track for a First (1st)"],
+    "highlights": ["Year 1: 81.5% overall", "1st in all modules", "On track for a First (1st)"],
     "achievements": [
       "Course Representative",
       "WHACK 2026 Organiser",
@@ -22,12 +22,14 @@
     "period": "2023 - 2024",
     "highlights": ["44/45 IB Diploma", "Highest marks in cohort"],
     "achievements": [
+      "HL: Computer Science, Mathematics, Physics",
+      "SL: English, Spanish, Business",
       "Student of the Year",
       "Deputy Head Boy",
       "Maths AA HL Prize",
       "Physics HL Prize",
       "Computer Science HL Prize",
-      "Founder & President, Chess Club",
+      "Founder & President, Chess Club (100+ members)",
       "Vice President, Gavel (Toastmasters) Club",
       "Vice President, Eco-Schools Club"
     ]

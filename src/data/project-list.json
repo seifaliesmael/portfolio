@@ -66,10 +66,9 @@
     "skills": "Python Flask, SQLAlchemy (SQLite 3)",
     "description": "Validit was a platform built by me and three teammates during the Warwick Hackathon (WHACK) 2025. In response to Brevan Howard's prompt \"Create something that helps understand information accuracy.\", we developed a platform that aggregates news articles and runs a multi-layer algorithm to analyse the validity and accuracy of the article.",
     "bulletPoints": [
-      "Built a credible news delivery platform using **Flask** to classify **100+ articles** weekly across 10 investment sectors",
-      "Integrated **REST APIs** such as OpenAlex, Semantic Scholar and ZeroGPT to analyse article credibility",
-      "Implemented sentiment analysis using **TextBlob/vaderSentiment** and automatic summaries via the **Gemini API**",
-      "Collaborated using **GitHub** for concurrent codebase contributions and merge conflict resolution"
+      "Engineered a web-based news delivery platform to classify **100+ weekly articles** across 10 investment sectors.",
+      "Integrated REST APIs (OpenAlex, Semantic Scholar, ZeroGPT) to rank articles by credibility over various metrics.",
+      "Implemented sentiment analysis using TextBlob/vaderSentiment and automatic summaries via the Gemini API."
     ],
     "tags": ["Hackathon Project", "Data Analysis", "Semantic Analysis"],
     "repo": "https://github.com/seifaliesmael/whack-25-SMTP",

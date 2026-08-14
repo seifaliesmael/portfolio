@@ -1,17 +1,30 @@
 [
   {
+    "id": 4,
+    "group": "Internships",
+    "role": "Software Engineer Intern",
+    "organisation": "LeadsCloser",
+    "period": "July 2026 - September 2026",
+    "skills": "TypeScript, Effect-TS, PostgreSQL, Vue 3",
+    "bulletPoints": [
+      "Refactored a CRM automation engine to compile workflows into atomic and durable DB-triggered steps.",
+      "Designed a generic trigger-condition-action model driving automation workflow authoring, analysis and execution",
+      "Engineered a tenant-scoped notification inbox with durable backfill and a staleness window to drop outdated alerts.",
+      "Rebuilt a voice assistant's desktop-only UI for mobile, adding a resizable drawer and push-to-talk functionality."
+    ]
+  },
+  {
     "id": 3,
     "group": "Internships",
-    "role": "Software Development Intern",
+    "role": "Software Developer Intern",
     "organisation": "PwC",
-    "location": "Telfair, Mauritius",
     "period": "May 2025 - June 2025",
+    "skills": "C#, ASP.NET, SQL",
     "bulletPoints": [
-      "Engineered a task-management system in **C# ASP.NET**, with an SQL database saving **250 hours annually**.",
-      "Implemented automated flow of data and tasks using **roles and access control** and integration to the database.",
-      "**Planned and led** an on-site **training session** for employees regarding the delegation system.",
-      "Designed and implemented a **large-scale data transformation algorithm** across **1,000,000+ records** in SQL, liaising with clients to define requirements and allow for **extensibility** of the system.",
-      "**Peer-reviewed code** to enforce best practices, consistency, and future-proofing."
+      "Engineered a task management and delegation system for company employees, **saving 100 hours annually**.",
+      "Integrated ASP.NET Identity systems for role-based authentication and access control to preserve data integrity.",
+      "Planned deployment to staging and production environments with test and training plans for end-users.",
+      "Designed and implemented data transformation processes across **1,000,000+ records** for a multinational client."
     ]
   },
   {
@@ -19,13 +32,10 @@
     "group": "Internships",
     "role": "I.T Advisory Intern",
     "organisation": "KPMG",
-    "location": "Ebene, Mauritius",
     "period": "March 2025 - April 2025",
+    "skills": "SQL, Excel",
     "bulletPoints": [
-      "Assisted in conducting **internal and external IT audits** for multinational clients, performing **completeness and accuracy testing** on system records and user data.",
-      "**Audited** onboarding/offboarding protocols to validate **compliance with regulations**.",
-      "Documented and evaluated **data extractions** using **SQL and Microsoft Office Suite**.",
-      "**Researched and planned** IT infrastructure implementation/upgrade proposals for clients."
+      "Executed IT audits for multinational clients, extracting and testing data via SQL for completeness and accuracy."
     ]
   },
   {
@@ -33,8 +43,8 @@
     "group": "Other Experience",
     "role": "Course Representative (SSLC)",
     "organisation": "University of Warwick - Department of Computer Science",
-    "location": "Coventry, United Kingdom",
     "period": "October 2025 - Present",
+    "skills": "",
     "bulletPoints": [
       "Selected as course representative for the Computer Science course.",
       "Participating in regular dialogue with University administration and module leaders, representing student voice."

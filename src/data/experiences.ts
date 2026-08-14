@@ -7,8 +7,8 @@ export interface Experience {
     group: string,
     role: string,
     organisation: string,
-    location: string,
     period: string,
+    skills: string,
     bulletPoints: ReactNode[]
 }
 
