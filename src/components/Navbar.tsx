@@ -1,4 +1,4 @@
-import { sections } from "../sections/sections";
+import { sections, sectionId } from "../sections/sections";
 
 const Navbar = () => (
 <nav
@@ -9,7 +9,7 @@ const Navbar = () => (
         {sections.map((section) => (
             <li key={section.title}>
                 <a
-                    href={`#${section.navTitle ? section.navTitle : section.title.toLowerCase()}`}
+                    href={`#${sectionId(section)}`}
                     className="flex flex-row items-center gap-3 text-slate-400 transition-colors duration-200 hover:text-cyan-600 focus-visible:text-cyan-600 focus-visible:outline-none dark:text-slate-500 dark:hover:text-cyan-400 dark:focus-visible:text-cyan-400"
                 >
                     {/* Outline dash: long while collapsed, short once the labels are showing */}

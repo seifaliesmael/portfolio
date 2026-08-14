@@ -2,6 +2,7 @@ import profile from "../data/profile.json";
 import { convertToRichText } from "../data/richText";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
+import SectionLinks from "../components/SectionLinks";
 
 const linkStyle = "flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100"
 
@@ -31,6 +32,12 @@ const AboutSection = (
         <a href={`mailto:${profile.links.email}`} aria-label="Email" title="Email" className={linkStyle}>
             <FaEnvelope className="h-5 w-5" />
         </a>
+    </div>
+
+    {/* Jump links to everything below, for anyone who misses the sidebar nav */}
+    <div className="mt-8 flex flex-col items-center gap-4">
+        <p className="text-xs font-semibold tracking-widest text-slate-400 uppercase dark:text-slate-500"> Jump to </p>
+        <SectionLinks exclude="aboutme" />
     </div>
 
 </section>);
