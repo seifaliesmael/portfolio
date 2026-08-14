@@ -15,6 +15,11 @@ const ProjectsSkills = () => {
     else return selectedProjectImage;
   }
 
+  const getLiveLabel = (url: string) => {
+    if (url.includes("itch.io")) return "Play the Game";
+    return "View Live Project";
+  }
+
   return (
     <div>
       {/* Skills Section */}
@@ -130,7 +135,7 @@ const ProjectsSkills = () => {
 
               {appData.projects.map((project) => (
 
-                  <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-strategy">
+                  <div key={project.id} className="col-lg-4 col-md-6 portfolio-item isotope-item filter-strategy">
 
                     <div className="portfolio-card" onClick={() => 
                       {
@@ -145,16 +150,31 @@ const ProjectsSkills = () => {
                         className="img-fluid"
                         style={{
                           width: "100%",
-                          aspectRatio: "16/9",       // Forces a horizontal shape (adjust to 3/2 or 4/3 if needed)
+                          aspectRatio: "16/9",      
                           objectFit: "contain",      // Shrinks the image to fit inside without cropping
                           backgroundColor: "#ffffff" // Adds the white padding on the empty sides
                         }}/>
                       </div>
                       <div className="portfolio-info">
-                        <h4> {project.title} </h4>
+                        <h4 className="d-flex align-items-center gap-2">
+                          <span>{project.title}</span>
+                          {project.liveUrl && (
+                            <a
+                              href={project.liveUrl}
+                              target="_blank"
+                              rel="noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              title={getLiveLabel(project.liveUrl)}
+                              aria-label={`${getLiveLabel(project.liveUrl)}: ${project.title}`}
+                              style={{ color: "var(--accent-color)", fontSize: "1rem", lineHeight: 1 }}
+                            >
+                              <i className="bi bi-box-arrow-up-right"></i>
+                            </a>
+                          )}
+                        </h4>
                         <p> <em>{project.skills}</em> </p>
                         <div className="portfolio-tags">
-                          {project.tags.map((tag) => <span> {tag} </span>)}
+                          {project.tags.map((tag, index) => <span key={index}> {tag} </span>)}
                         </div>
                       </div>
                     </div>
@@ -217,8 +237,8 @@ const ProjectsSkills = () => {
                     </div>
                     <div className="thumbnail-grid">
                       <div className="row g-2">
-                        {selectedProject.images?.map((link:string) => 
-                          (<div className="col-3">
+                        {selectedProject.images?.map((link:string, index:number) => 
+                          (<div key={index} className="col-3">
                             <img src={link} 
                             alt="Gallery" 
                             className="img-fluid rounded" 
@@ -242,7 +262,6 @@ const ProjectsSkills = () => {
                         <ul className="list-unstyled m-0">
                           {selectedProject.collaborators.map((person: string, index: number) => (
                             <li key={index} className="d-flex align-items-center mb-2" style={{ color: "color-mix(in srgb, var(--default-color), transparent 15%)" }}>
-                              {/* Using a person icon to match the theme! */}
                               <i className="bi bi-person-fill me-2" style={{ color: "var(--accent-color)", fontSize: "1.1rem" }}></i>
                               <span>{person}</span>
                             </li>
@@ -259,7 +278,21 @@ const ProjectsSkills = () => {
                   <div className="portfolio-details-content">
                     
                     <h2 className="project-title mb-3">{selectedProject.title}</h2>
-                    
+
+                    {selectedProject.liveUrl && (
+                    <div className="project-website-box mb-2 p-3 light-background"
+                    style={{ backgroundColor: "#213642",
+                    borderRadius: "10px",
+                    border: "1px solid var(--accent-color)"
+                    }}>
+                      <h5> <strong>{getLiveLabel(selectedProject.liveUrl)}</strong> </h5>
+                      <div className="project-website mb-0">
+                        <i className="bi bi-box-arrow-up-right"></i>
+                        <a href={selectedProject.liveUrl} target="_blank" rel="noreferrer" style={{ wordBreak: "break-all" }}> {selectedProject.liveUrl}</a>
+                      </div>
+                    </div>
+                    )}
+
                     {selectedProject.repo && (
                     <div className="project-website-box mb-2 p-3 light-background"
                     style={{ backgroundColor: "#213642",
@@ -268,7 +301,7 @@ const ProjectsSkills = () => {
                     }}> 
                       <h5> <strong>Link to Project Repository </strong> </h5>
                       <div className="project-website mb-0">
-                        <i className="bi bi-link-45deg"></i>
+                        <i className="bi bi-github"></i>
                         <a href={selectedProject.repo} target="_blank" rel="noreferrer" style={{ wordBreak: "break-all" }}> {selectedProject.repo}</a>
                       </div>
                     </div>
