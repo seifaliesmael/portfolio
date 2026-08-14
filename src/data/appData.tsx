@@ -58,7 +58,7 @@ export const appData: AppData = {
             tags: ["Personal Project", "Full-Stack", "C#"],
             repo: "https://github.com/seifaliesmael/better-lifting-app",
             liveUrl: "https://mesopal.vercel.app",
-            images: undefined,
+            images: ["assets/img/projects/mesopal/mesopal1.png", "assets/img/projects/mesopal/mesopal2.png"],
             collaborators: undefined
         },
 
